@@ -98,7 +98,8 @@ This survey is necessary to address the growing issue of data contamination in L
       - [Algorithm-Hardware Co-Design](#Algorithm-Hardware-Co-Design)
     - [LLM Frameworks](#LLM-Frameworks)
 
-## 🤖 Model-Centric Methods
+🤖 
+## Model-Centric Methods
 ### Model Compression
 #### Quantization
 ##### Post-Training Quantization
