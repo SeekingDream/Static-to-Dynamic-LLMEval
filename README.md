@@ -23,7 +23,7 @@ Data contamination occurs when benchmark data is inadvertently included in the t
 This survey is necessary to address the growing issue of data contamination in LLM benchmarking, which compromises the reliability of **static benchmarks** that rely on fixed, human-curated datasets. While methods like data encryption and post-hoc contamination detection attempt to mitigate this issue, they have inherent limitations. **Dynamic benchmarking** has emerged as a promising alternative, yet existing reviews focus primarily on post-hoc detection and lack a systematic analysis of dynamic methods. Moreover, no standardized criteria exist for evaluating these benchmarks. To bridge this gap, we comprehensively review contamination-free benchmarking strategies, assess their strengths and limitations, and propose evaluation criteria for dynamic benchmarks, offering insights to guide future research and standardization.
 
 ## 📖 Table of Content
-- [🤖 Model-Centric Methods](#-Model-Centric) 
+- [🤖 Model-Centric Methods](#-Model-Centric-Methods) 
   - [Model Compression](#Model-Compression) 
     - [Quantization](#Quantization)
       - [Post-Training Quantization](#Post-Training-Quantization)
