@@ -112,8 +112,23 @@ Commonsense Knowledge
 - PIQA: Reasoning about Physical Commonsense in Natural Language, <ins>AAAI, 2020</ins> [[Paper](https://arxiv.org/abs/1911.11641)] [[Code](https://yonatanbisk.com/piqa/)]
 - CHINESE SIMPLEQA: A CHINESE FACTUALITY EVALUATION FOR LARGE LANGUAGE MODELS, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2411.07140)] [[Code](https://openstellarteam.github.io/ChineseSimpleQA/)]
 #### Safety
+- REALTOXICITYPROMPTS:
+Evaluating Neural Toxic Degeneration in Language Models, <ins>EMNLP, 2020</ins> [[Paper](https://aclanthology.org/2020.findings-emnlp.301.pdf)] [[Code](https://github.com/allenai/real-toxicity-prompts)]
+- TOXIGEN: A Large-Scale Machine-Generated Dataset for Adversarial
+and Implicit Hate Speech Detection, <ins>ACL, 2022</ins> [[Paper](https://aclanthology.org/2022.acl-long.234.pdf)] [[Code](https://github.com/microsoft/toxigen)]
 #### Language
+- GLUE: A Multi-Task Benchmark and Analysis Platform
+for Natural Language Understanding, <ins>EMNLP, 2018</ins> [[Paper](https://aclanthology.org/W18-5446.pdf)] [[Code](https://paperswithcode.com/paper/glue-a-multi-task-benchmark-and-analysis)]
+- SuperGLUE: A Stickier Benchmark for
+General-Purpose Language Understanding Systems, <ins>NeurIPS, 2019</ins> [[Paper](https://arxiv.org/pdf/1905.00537)] [[Code](https://huggingface.co/datasets/aps/super_glue)]
+- CLUE: A Chinese Language Understanding Evaluation Benchmark, <ins>COLING, 2020</ins> [[Paper](https://aclanthology.org/2020.coling-main.419.pdf)] [[Code](https://github.com/CLUEbenchmark/CLUE)]
+- CLUE: A Chinese Language Understanding Evaluation Benchmark, <ins>COLING, 2020</ins> [[Paper](https://aclanthology.org/2020.coling-main.419.pdf)] [[Code](https://github.com/CLUEbenchmark/CLUE)]
+- Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them, <ins>ACL, 2023</ins> [[Paper](https://aclanthology.org/2023.findings-acl.824/)] [[Code](https://github.com/suzgunmirac/BIG-Bench-Hard)]
 #### Reading Comprehension
+- Know What You Don’t Know: Unanswerable Questions for SQuAD, <ins>ACL, 2018</ins> [[Paper](https://aclanthology.org/P18-2124.pdf)] [[Code](https://rajpurkar.github.io/SQuAD-explorer/)]
+- QuAC : Question Answering in Context, <ins>EMNLP, 2018</ins> [[Paper](https://aclanthology.org/D18-1241.pdf)] [[Code](https://quac.ai/)]
+- BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions
+, <ins>NAACL, 2019</ins> [[Paper](https://aclanthology.org/N19-1300.pdf)] [[Code](https://github.com/google-research-datasets/boolean-questions)]
 ### Methods for Mitigation
 #### Canary String
 #### Encryption
