@@ -19,140 +19,118 @@ Data contamination has received increasing attention in the era of large languag
 Data contamination occurs when benchmark data is inadvertently included in the training phase of language models, leading to an inflated and misleading assessment of their performance. While this issue has been recognized for some time—stemming from the fundamental machine learning principle of separating training and test sets—it has become even more critical with the advent of LLMs. These models often scrape vast amounts of publicly available data from the Internet, significantly increasing the likelihood of contamination. Furthermore, due to privacy and commercial concerns, tracing the exact training data for these models is challenging, if not impossible, complicating efforts to detect and mitigate potential contamination.
 
 ## ❓ Why do we need this survey?
-![img/image.jpg](img/image.jpg)
+<!-- ![img/image.jpg](img/image.jpg) -->
 This survey is necessary to address the growing issue of data contamination in LLM benchmarking, which compromises the reliability of **static benchmarks** that rely on fixed, human-curated datasets. While methods like data encryption and post-hoc contamination detection attempt to mitigate this issue, they have inherent limitations. **Dynamic benchmarking** has emerged as a promising alternative, yet existing reviews focus primarily on post-hoc detection and lack a systematic analysis of dynamic methods. Moreover, no standardized criteria exist for evaluating these benchmarks. To bridge this gap, we comprehensively review contamination-free benchmarking strategies, assess their strengths and limitations, and propose evaluation criteria for dynamic benchmarks, offering insights to guide future research and standardization.
 
 ## 📖 Table of Content
-- [🤖 Model-Centric Methods](#Model-Centric-Methods) 
-  - [Model Compression](#Model-Compression) 
-    - [Quantization](#Quantization)
-      - [Post-Training Quantization](#Post-Training-Quantization)
-        - [Weight-Only Quantization](#Weight-Only-Quantization)
-        - [Weight-Activation Co-Quantization](#Weight-Activation-Co-Quantization)
-        - [Evaluation of Post-Training Quantization](#Evaluation-of-Post-Training-Quantization)
+- [Static Benchmarking](#Static-Benchmarking)
+    - [Static Benchmarking Applications](#Static-Benchmarking-Applications)
+      - [Math](#Math)
+      - [Knowledge](#Knowledge)
+      - [Coding](#Coding)
+      - [Instruction Following](#Instruction-Following)
+      - [Reasoning](#Reasoning)
+      - [Safety](#Safety)
+      - [Language](#Language)
+      - [Reading Comprehension](#Reading-Comprehension)
+    - [Methods for Mitigation](#Methods-For-Mitigation)
+      - [Canary String](#Canary-String)
+      - [Encryption](#Encryption)
+      - [Label Protection](#Label-Protection)
+      - [Post-hoc Detection](#Post-Hoc-Detection)
+- [Dynamic Benchmarking](#Dynamic-Benchmarking)
+  - [Dynamic Benchmark Application](#Dynamic-Benchmark-Application)
+    - [Temporal Cutoff](#Temporal-Cutoff)
+    - [Rule-Based Generation](#Rule-Based-Generation)
+      - [Template-Based](#Template-Based)
+      - [Table-Based](#Table-Based)
+      - [Graph-Based](#Graph-Based)
+    - [LLM-Based Generation](#LLM-Based-Generation)
+      - [Benchmark Rewriting](#Benchmark-Rewriting)
+      - [Interactive Evaluation](#Interactive-Evaluation)
+      - [Multi-Agent Evaluation](#Multi-Agent-Evaluation)
+    - [Hybrid Generation](#Hybrid-Generation)
 
 
-🤖 
-## Model-Centric Methods
-### Model Compression
-#### Quantization
-##### Post-Training Quantization
-###### Weight-Only Quantization
-- I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2405.17849)] 
-- IntactKV: Improving Large Language Model Quantization by Keeping Pivot Tokens Intact, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2403.01241)] 
-- OmniQuant: OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2308.13137)] [[Code](https://github.com/OpenGVLab/OmniQuant)]
-- OneBit: Towards Extremely Low-bit Large Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.11295)]
-- GPTQ: Accurate Quantization for Generative Pre-trained Transformers, <ins>ICLR, 2023</ins> [[Paper](https://openreview.net/forum?id=tcbBPnfwxS)] [[Code](https://github.com/IST-DASLab/gptq)]
-- QuIP: 2-Bit Quantization of Large Language Models With Guarantees, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2307.13304)] [[Code](https://github.com/jerry-chee/QuIP)]
-- AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.00978)] [[Code](https://github.com/mit-han-lab/llm-awq)]
-- OWQ: Lessons Learned from Activation Outliers for Weight Quantization in Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.02272)] [[Code](https://github.com/xvyaward/owq)]
-- SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/pdf/2306.03078)] [[Code](https://github.com/Vahe1994/SpQR)]
-- FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs, <ins>NeurIPS-ENLSP, 2023</ins> [[Paper](https://arxiv.org/abs/2308.09723)]
-- LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale, <ins>NeurlPS, 2022</ins> [[Paper](https://openreview.net/forum?id=dXiGWqBoxaD)] [[Code](https://github.com/TimDettmers/bitsandbytes)]
-- Optimal Brain Compression: A Framework for Accurate Post-Training Quantization and Pruning, <ins>NeurIPS, 2022</ins> [[Paper](https://arxiv.org/abs/2208.11580)] [[Code](https://github.com/IST-DASLab/OBC)]
-- QuantEase: Optimization-based Quantization for Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2309.01885)] [[Code](https://github.com/linkedin/QuantEase)]
-###### Weight-Activation Co-Quantization
-- Rotation and Permutation for Advanced Outlier Management and Efficient Quantization of LLMs, <ins>NeurIPS, 2024</ins> [[Paper](https://arxiv.org/abs/2308.13137)] 
-- OmniQuant: OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2308.13137)] [[Code](https://github.com/OpenGVLab/OmniQuant)]
-- Intriguing Properties of Quantization at Scale, <ins>NeurIPS, 2023</ins> [[Paper](https://arxiv.org/abs/2305.19268)]
-- ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2303.08302)] [[Code](https://github.com/microsoft/DeepSpeed)]
-- ZeroQuant-FP: A Leap Forward in LLMs Post-Training W4A8 Quantization Using Floating-Point Formats, <ins>NeurIPS-ENLSP, 2023</ins> [[Paper](https://arxiv.org/abs/2307.09782)] [[Code](https://github.com/microsoft/DeepSpeed)]
-- OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization, <ins>ISCA, 2023</ins> [[Paper](https://arxiv.org/abs/2304.07493)] [[Code](https://github.com/clevercool/ANT-Quantization)]
-- RPTQ: Reorder-based Post-training Quantization for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2304.01089)] [[Code](https://github.com/hahnyuan/RPTQ4LLM)]
-- Outlier Suppression+: Accurate Quantization of Large Language Models by Equivalent and Optimal Shifting and Scaling, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2304.09145)] [[Code](https://github.com/ModelTC/Outlier_Suppression_Plus)]
-- QLLM: Accurate and Efficient Low-Bitwidth Quantization for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2310.08041)]
-- SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models, <ins>ICML, 2023</ins> [[Paper](https://arxiv.org/abs/2211.10438)] [[Code](https://github.com/mit-han-lab/smoothquant)]
-- ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers, <ins>NeurIPS, 2022</ins> [[Paper](https://proceedings.neurips.cc/paper_files/paper/2022/hash/adf7fa39d65e2983d724ff7da57f00ac-Abstract-Conference.html)]
 
-###### Evaluation of Post-Training Quantization
- - Evaluating Quantized Large Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.18158)]
-##### Quantization-Aware Training
-- The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.17764)]
-- FP8-LM: Training FP8 Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2310.18313)]
-- Training and inference of large language models using 8-bit floating point, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2309.17224)]
-- BitNet: Scaling 1-bit Transformers for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2310.11453)]
-- LLM-QAT: Data-Free Quantization Aware Training for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2305.17888)] [[Code](https://github.com/facebookresearch/LLM-QAThttps://github.com/facebookresearch/LLM-QAT)]
-- Compression of Generative Pre-trained Language Models via Quantization, <ins>ACL, 2022</ins> [[Paper](https://aclanthology.org/2022.acl-long.331.pdf)]
-#### Parameter Pruning
-##### Structured Pruning
-- Compact Language Models via Pruning and Knowledge Distillation, <ins>arXiv, 2024</ins> [[Paper](https://www.arxiv.org/abs/2407.14679)] 
-- A deeper look at depth pruning of LLMs, <ins>arXiv, 2024</ins> [[Paper](https://www.arxiv.org/abs/2407.16286)] 
-- Perplexed by Perplexity: Perplexity-Based Data Pruning With Small Reference Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2405.20541)] 
-- Plug-and-Play: An Efficient Post-training Pruning Method for Large Language Models, <ins>ICLR, 2024</ins> [[Paper](https://openreview.net/forum?id=Tr0lPx9woF)] 
-- BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparsity Allocation, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.16880)] 
-- ShortGPT: Layers in Large Language Models are More Redundant Than You Expect, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2403.03853)] 
-- NutePrune: Efficient Progressive Pruning with Numerous Teachers for Large Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.09773)] 
-- SliceGPT: Compress Large Language Models by Deleting Rows and Columns, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2401.15024)] [[Code](https://github.com/microsoft/TransformerCompression?utm_source=catalyzex.com)]
-- LoRAShear: Efficient Large Language Model Structured Pruning and Knowledge Recovery, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2310.18356)]
-- LLM-Pruner: On the Structural Pruning of Large Language Models, <ins>NeurIPS, 2023</ins> [[Paper](https://arxiv.org/abs/2305.11627)] [[Code](https://github.com/horseee/LLM-Pruner)]
-- Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning, <ins> NeurIPS-ENLSP, 2023</ins> [[Paper](https://arxiv.org/abs/2310.06694)] [[Code](https://github.com/princeton-nlp/LLM-Shearing)]
-- LoRAPrune: Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning, <ins>arXiv, 2023</ins> [[Paper](https://doi.org/10.48550/arXiv.2305.18403)]
-- LoRAP: Transformer Sub-Layers Deserve Differentiated Structured Compression for Large Language Models, <ins>ICML, 2024</ins> [[Paper](https://arxiv.org/abs/2404.09695)][[Code](https://github.com/lihuang258/LoRAP)]
-##### Unstructured Pruning
-- MaskLLM: Learnable Semi-Structured Sparsity for Large Language Models, <ins>NIPS, 2024</ins> [[Paper](https://arxiv.org/abs/2409.17481)] 
-- Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2310.08915)] 
-- SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot, <ins>ICML, 2023</ins> [[Paper](https://arxiv.org/abs/2301.00774)] [[Code](https://github.com/IST-DASLab/sparsegpt)]
-- A Simple and Effective Pruning Approach for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.11695)] [[Code](https://github.com/locuslab/wanda)]
-- One-Shot Sensitivity-Aware Mixed Sparsity Pruning for Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/pdf/2310.09499v1.pdf)]
-#### Low-Rank Approximation
-- SVD-LLM: Singular Value Decomposition for Large Language Model Compression, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2403.07378)] [[Code](https://github.com/AIoT-MLSys-Lab/SVD-LLM)]
-- ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2312.05821)] [[Code](https://github.com/hahnyuan/ASVD4LLM)]
-- Language model compression with weighted low-rank factorization, <ins>ICLR, 2022</ins> [[Paper](https://arxiv.org/abs/2207.00112)]
-- TensorGPT: Efficient Compression of the Embedding Layer in LLMs based on the Tensor-Train Decomposition, <ins>arXiv, 2023</ins> [[Paper](https://doi.org/10.48550/arXiv.2307.00526)]
-- LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation, <ins>ICML, 2023</ins>  [[Paper](https://arxiv.org/abs/2306.11222)] [[Code](https://github.com/yxli2123/LoSparse)]
-#### Knowledge Distillation
-##### White-Box KD
-- DDK: Distilling Domain Knowledge for Efficient Large Language Models <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2407.16154)]
-- Rethinking Kullback-Leibler Divergence in Knowledge Distillation for Large Language Models <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2404.02657)]
-- DistiLLM: Towards Streamlined Distillation for Large Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.03898)] [[Code](https://github.com/jongwooko/distillm)]
-- Towards the Law of Capacity Gap in Distilling Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2311.07052)] [[Code](https://github.com/GeneZC/MiniMA)]
-- Baby Llama: Knowledge Distillation from an Ensemble of Teachers Trained on a Small Dataset with no Performance Penalty, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2308.02019)]
-- Knowledge Distillation of Large Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.08543)] [[Code](https://github.com/microsoft/LMOps/tree/main/minillm)]
-- GKD: Generalized Knowledge Distillation for Auto-regressive Sequence Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.13649)]
-- Propagating Knowledge Updates to LMs Through Distillation, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2306.09306)] [[Code](https://github.com/shankarp8/knowledge_distillation)]
-- Less is More: Task-aware Layer-wise Distillation for Language Model Compression, <ins>ICML, 2023</ins> [[Paper](https://arxiv.org/pdf/2210.01351.pdf)]
-- Token-Scaled Logit Distillation for Ternary Weight Generative Language Models, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2308.06744)]
-##### Black-Box KD
-- Zephyr: Direct Distillation of LM Alignment, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2312.09571)]
-- Instruction Tuning with GPT-4, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2304.03277)] [[Code](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM)]
-- Lion: Adversarial Distillation of Closed-Source Large Language Model, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2305.12870)] [[Code](https://github.com/YJiangcm/Lion)]
-- Specializing Smaller Language Models towards Multi-Step Reasoning, <ins>ICML, 2023</ins> [[Paper](https://aclanthology.org/2022.findings-naacl.169.pdf)] [[Code](https://github.com/FranxYao/FlanT5-CoT-Specialization)]
-- Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes, <ins>ACL, 2023</ins> [[Paper](https://arxiv.org/abs/2305.02301)]
-- Large Language Models Are Reasoning Teachers, <ins>ACL, 2023</ins> [[Paper](https://arxiv.org/abs/2212.10071)] [[Code](https://github.com/itsnamgyu/reasoning-teacher)]
-- SCOTT: Self-Consistent Chain-of-Thought Distillation, <ins>ACL, 2023</ins> [[Paper](https://arxiv.org/abs/2305.01879)] [[Code](https://github.com/wangpf3/consistent-CoT-distillation)]
-- Symbolic Chain-of-Thought Distillation: Small Models Can Also "Think" Step-by-Step, <ins>ACL, 2023</ins> [[Paper](https://arxiv.org/abs/2306.14050)]
-- Distilling Reasoning Capabilities into Smaller Language Models, <ins>ACL, 2023</ins> [[Paper](https://aclanthology.org/2023.findings-acl.441/)] [[Code](https://github.com/kumar-shridhar/Distiiling-LM)]
-- In-context Learning Distillation: Transferring Few-shot Learning Ability of Pre-trained Language Models, <ins>arXiv, 2022</ins> [[Paper](https://arxiv.org/abs/2212.10670)]
-- Explanations from Large Language Models Make Small Reasoners Better, <ins>arXiv, 2022</ins> [[Paper](https://arxiv.org/abs/2210.06726)]
-- DISCO: Distilling Counterfactuals with Large Language Models, <ins>arXiv, 2022</ins> [[Paper](https://arxiv.org/abs/2212.10534)] [[Code](https://github.com/eric11eca/disco)]
-##### Parameter-Sharing
-- MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.16840)] 
-### Efficient Pre-Training
-#### Mixed Precision Training
-- Bfloat16 Processing for Neural Networks, <ins>ARITH, 2019</ins> [[Paper](https://ieeexplore.ieee.org/document/8877390)]
-- A Study of BFLOAT16 for Deep Learning Training, <ins>arXiv, 2019</ins> [[Paper](https://arxiv.org/abs/1905.12322)]
-- Mixed Precision Training, <ins>ICLR, 2018</ins> [[Paper](https://openreview.net/forum?id=r1gs9JgRZ)]
-#### Scaling Models
-- lemon: lossless model expansion, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2310.07999)] 
-- Preparing Lessons for Progressive Training on Language Models, <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/abs/2401.09192)] 
-- Learning to Grow Pretrained Models for Efficient Transformer Training, <ins>ICLR, 2023</ins> [[Paper](https://openreview.net/pdf?id=cDYRS5iZ16f)] [[Code](https://github.com/VITA-Group/LiGO)]
-- 2x Faster Language Model Pre-training via Masked Structural Growth, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2305.02869)]
-- Reusing Pretrained Models by Multi-linear Operators for Efficient Training, <ins>NeurIPS, 2023</ins> [[Paper](https://openreview.net/pdf?id=RgNXKIrWyU)]
-- FLM-101B: An Open LLM and How to Train It with $100 K Budget, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/pdf/2309.03852.pdf)] [[Code](https://huggingface.co/CofeAI/FLM-101B)]
-- Knowledge Inheritance for Pre-trained Language Models, <ins>NAACL, 2022</ins> [[Paper](https://aclanthology.org/2022.naacl-main.288/)] [[Code](https://github.com/thunlp/Knowledge-Inheritance)]
-- Staged Training for Transformer Language Models, <ins>ICML, 2022</ins> [[Paper](https://proceedings.mlr.press/v162/shen22f/shen22f.pdf)] [[Code](https://github.com/allenai/staged-training)]
-#### Initialization Techniques
-- Deepnet: Scaling transformers to 1,000 layers, <ins>arXiv, 2022</ins> [[Paper](https://arxiv.org/abs/2203.00555)] [[Code](https://github.com/microsoft/torchscale)]
-- ZerO Initialization: Initializing Neural Networks with only Zeros and Ones, <ins>TMLR, 2022</ins> [[Paper](https://openreview.net/pdf?id=1AxQpKmiTc)] [[Code](https://github.com/jiaweizzhao/ZerO-initialization)]
-- Rezero is All You Need: Fast Convergence at Large Depth, <ins>UAI, 2021</ins> [[Paper](https://proceedings.mlr.press/v161/bachlechner21a/bachlechner21a.pdf)] [[Code](https://github.com/majumderb/rezero)]
-- Batch Normalization Biases Residual Blocks Towards the Identity Function in Deep Networks, <ins>NeurIPS, 2020</ins> [[Paper](https://papers.neurips.cc/paper/2020/file/e6b738eca0e6792ba8a9cbcba6c1881d-Paper.pdf)]
-- Improving Transformer Optimization Through Better Initialization, <ins>ICML, 2020</ins> [[Paper](https://proceedings.mlr.press/v119/huang20f/huang20f.pdf)] [[Code](https://github.com/layer6ai-labs/T-Fixup)]
-- Fixup Initialization: Residual Learning without Normalization, <ins>ICLR, 2019</ins> [[Paper](https://openreview.net/pdf?id=H1gsz30cKX)]
-- On Weight Initialization in Deep Neural Networks, <ins>arXiv, 2017</ins> [[Paper](https://arxiv.org/abs/1704.08863)]
-#### Training Optimizers
-- Towards Optimal Learning of Language Models, <ins>arXiv, 2024</ins> [[Paper](https://arxiv.org/abs/2402.17759)] [[Code](https://github.com/microsoft/LMOps/tree/main/learning_law)]
-- Symbolic Discovery of Optimization Algorithms, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2302.06675)]
-- Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training, <ins>arXiv, 2023</ins> [[Paper](https://arxiv.org/abs/2305.14342)] [[Code](https://github.com/Liuhong99/Sophia)]
+
+
+
+## Static Benchmarking
+### Static Benchmark Application
+#### Math
+- Training Verifiers to Solve Math Word Problems, <ins>arXiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2110.14168)] [[Code](https://github.com/openai/grade-school-math)]
+- Measuring Mathematical Problem Solving With the MATH Dataset, <ins>NeurIPS, 2021</ins> [[Paper](https://arxiv.org/abs/2103.03874)] [[Code](https://github.com/hendrycks/math)]
+#### Knowledge
+- TriviaQA: A Large Scale Distantly Supervised Challenge Dataset
+for Reading Comprehension, <ins>ACL, 2017</ins> [[Paper](https://aclanthology.org/P17-1147/)] [[Code](https://nlp.cs.washington.edu/triviaqa/)]
+- Natural questions: a benchmark for question answering research, <ins>TACL, 2019</ins> [[Paper](https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00276/43518/Natural-Questions-A-Benchmark-for-Question)] [[Code](https://ai.google.com/research/NaturalQuestions)]
+- Measuring Massive Multitask Language Understanding, <ins>ICLR, 2021</ins> [[Paper](https://openreview.net/forum?id=d7KBjmI3GmQ)] [[Code](https://github.com/hendrycks/test)]
+- Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them, <ins>ACL, 2023</ins> [[Paper](https://aclanthology.org/2023.findings-acl.824/)] [[Code](https://github.com/suzgunmirac/BIG-Bench-Hard)]
+- AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models, <ins>NAACL, 2024</ins> [[Paper](https://aclanthology.org/2024.findings-naacl.149/)] [[Code](https://github.com/ruixiangcui/AGIEval)]
+- Are We Done with MMLU?, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2406.04127)] [[Code](https://huggingface.co/datasets/edinburgh-dawg/mmlu-redux-2.0)]
+- MMLU-Pro: A More Robust and Challenging
+Multi-Task Language Understanding Benchmark, <ins>NeurIPS, 2024</ins> [[Paper](https://arxiv.org/pdf/2406.01574)] [[Code](https://github.com/TIGER-AI-Lab/MMLU-Pro)]
+- Capabilities of Large Language Models in Control Engineering:
+A Benchmark Study on GPT-4, Claude 3 Opus, and Gemini 1.0 Ultra, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2404.03647)] 
+- GPQA: A Graduate-Level Google-Proof
+Q&A Benchmark, <ins>COLM, 2024</ins> [[Paper](https://arxiv.org/pdf/2311.12022)] [[Code](https://github.com/idavidrein/gpqa/)]
+- Length-Controlled AlpacaEval:
+A Simple Way to Debias Automatic Evaluators, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/abs/2404.04475)] [[Code](https://github.com/tatsu-lab/alpaca_eval?tab=readme-ov-file)]
+- FROM CROWDSOURCED DATA TO HIGH-QUALITY
+BENCHMARKS: ARENA-HARD AND BENCHBUILDER
+PIPELINE, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2406.11939)] [[Code](https://github.com/lmarena/arena-hard-auto)]
+- Fact, Fetch, and Reason: A Unified Evaluation of
+Retrieval-Augmented Generation, <ins>NAACL, 2025</ins> [[Paper](https://arxiv.org/pdf/2409.12941)] [[Code](https://huggingface.co/datasets/google/frames-benchmark)]
+- AIME., [[Website](https://artofproblemsolving.com/wiki/index.php/2024_AIME_I?srsltid=AfmBOorI76-rO7SIb5k4OFKc-0omPLPimr5TnY6Phqz-PW8q6WsfYOiz)]
+- CNMO., [[Website](https://www.cms.org.cn/Home/comp/comp/cid/12.html)]
+#### Coding
+- Evaluating Large Language Models Trained on Code, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2107.03374)] [[Code](https://github.com/openai/human-eval)]
+- Program Synthesis with Large Language Models, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2108.07732)] [[Code](https://github.com/google-research/google-research/tree/master/mbpp)]
+- SWE-bench: Can Language Models Resolve Real-world Github Issues?, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2310.06770)] [[Code](https://www.swebench.com/)]
+- SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?, <ins>ICLR, 2025</ins> [[Paper](https://arxiv.org/abs/2410.03859)] [[Code](https://www.swebench.com/multimodal)]
+- Codeforces: Competitive programming platform., [[Website](https://codeforces.com/)] 
+- Aider., [[Website](https://aider.chat/)] 
+#### Instruction Following 
+- Instruction-Following Evaluation for Large Language
+Models, <ins>Arxiv, 2023</ins> [[Paper](https://arxiv.org/pdf/2311.07911)] [[Code](https://github.com/google-research/google-research/tree/master/instruction_following_eval)]
+- C-EVAL: A Multi-Level Multi-Discipline Chinese
+Evaluation Suite for Foundation Models, <ins>NeurIPS, 2023</ins> [[Paper](https://github.com/hkust-nlp/ceval)] [[Code](https://github.com/qinyiwei/InfoBench)]
+- INFOBENCH: Evaluating Instruction Following Ability
+in Large Language Models, <ins>ACL, 2024</ins> [[Paper](https://arxiv.org/pdf/2401.03601)] [[Code](https://github.com/qinyiwei/InfoBench)]
+#### Reasoning
+- Can a Suit of Armor Conduct Electricity?
+A New Dataset for Open Book Question Answering, <ins>EMNLP, 2018</ins> [[Paper](https://aclanthology.org/D18-1260.pdf)] [[Code](https://leaderboard.allenai.org/open_book_qa)]
+- Think you have Solved Question Answering?
+Try ARC, the AI2 Reasoning Challenge, <ins>Arxiv, 2018</ins> [[Paper](https://arxiv.org/pdf/1803.05457)] [[Code](https://huggingface.co/datasets/allenai/ai2_arc)]
+- HellaSwag: Can a Machine Really Finish Your Sentence?, <ins>ACL, 2019</ins> [[Paper](https://arxiv.org/pdf/1905.07830)] [[Code](https://rowanzellers.com/hellaswag/)]
+- WINOGRANDE: An Adversarial Winograd Schema Challenge at Scale,<ins>ACL, 2019</ins>[[Paper](https://arxiv.org/pdf/1907.10641)] [[Code](https://winogrande.allenai.org/)]
+- COMMONSENSEQA: A Question Answering Challenge Targeting
+Commonsense Knowledge
+, <ins>NAACL, 2019</ins> [[Paper](https://aclanthology.org/N19-1421.pdf)] [[Code](https://github.com/jonathanherzig/commonsenseqa)]
+- SOCIAL IQA: Commonsense Reasoning about Social Interactions, <ins>EMNLP, 2019</ins> [[Paper](https://arxiv.org/pdf/1904.09728)] [[Code](https://github.com/google/BIG-bench/blob/main/bigbench/benchmark_tasks/social_iqa/README.md)]
+- PIQA: Reasoning about Physical Commonsense in Natural Language, <ins>AAAI, 2020</ins> [[Paper](https://arxiv.org/abs/1911.11641)] [[Code](https://yonatanbisk.com/piqa/)]
+- CHINESE SIMPLEQA: A CHINESE FACTUALITY EVALUATION FOR LARGE LANGUAGE MODELS, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2411.07140)] [[Code](https://openstellarteam.github.io/ChineseSimpleQA/)]
+#### Safety
+#### Language
+#### Reading Comprehension
+### Methods for Mitigation
+#### Canary String
+#### Encryption
+#### Label Protection
+#### Post-hoc Detection
+## Dynamic Benchmarking
+### Dynamic Benchmark Application
+#### Temporal Cutoff
+#### Rule-Based Generation
+##### Template-Based
+##### Table-Based
+##### Graph-Based
+#### LLM-Based Generation
+##### Benchmark Rewriting
+##### Interactive Evaluation
+##### Multi-Agent Evaluation
+#### Hybrid Generation
 
 
 
