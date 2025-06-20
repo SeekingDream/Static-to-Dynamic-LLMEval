@@ -177,6 +177,8 @@ Detection in Large Language Models
 ## Dynamic Benchmarking
 ### Dynamic Benchmark Application
 #### Temporal Cutoff
+- TurtleBench: Evaluating Top Language Models via Real-World Yes/No Puzzles
+, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2410.05262)] [[Code](https://github.com/mazzzystar/TurtleBench)]
 - AntiLeak-Bench: Preventing Data Contamination by Automatically
 Constructing Benchmarks with Updated Real-World Knowledge
 , <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.13670)] [[Code](https://github.com/bobxwu/AntiLeak-Bench)]
@@ -247,6 +249,8 @@ Large Language Models
 - BENCHAGENTS: Automated Benchmark Creation with Agent Interaction
 , <ins>Arxiv , 2024</ins> [[Paper](https://arxiv.org/pdf/2410.22584)]
 #### Hybrid Generation
+- GuessArena: Guess Who I Am? A Self-Adaptive Framework for Evaluating LLMs in Domain-Specific Knowledge and Reasoning
+, <ins>ACL , 2025</ins> [[Paper](https://arxiv.org/pdf/2505.22661)] [[Code](https://github.com/IAAR-Shanghai/GuessArena)]
 - LatestEval: Addressing Data Contamination in Language Model Evaluation
 through Dynamic and Time-Sensitive Test Construction
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2312.12343)] [[Code](https://github.com/liyucheng09/LatestEval)]
