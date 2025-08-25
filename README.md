@@ -112,6 +112,7 @@ Commonsense Knowledge
 - SOCIAL IQA: Commonsense Reasoning about Social Interactions, <ins>EMNLP, 2019</ins> [[Paper](https://arxiv.org/pdf/1904.09728)] [[Code](https://github.com/google/BIG-bench/blob/main/bigbench/benchmark_tasks/social_iqa/README.md)]
 - PIQA: Reasoning about Physical Commonsense in Natural Language, <ins>AAAI, 2020</ins> [[Paper](https://arxiv.org/abs/1911.11641)] [[Code](https://yonatanbisk.com/piqa/)]
 - CHINESE SIMPLEQA: A CHINESE FACTUALITY EVALUATION FOR LARGE LANGUAGE MODELS, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2411.07140)] [[Code](https://openstellarteam.github.io/ChineseSimpleQA/)]
+- TIME: A Multi-level Benchmark for Temporal Reasoning of LLMs in Real-World Scenario, <ins>Arxiv, 2025</ins>  [[Paper](https://arxiv.org/abs/2505.12891)] [[Code](https://github.com/sylvain-wei/TIME)].
 #### Safety
 - REALTOXICITYPROMPTS:
 Evaluating Neural Toxic Degeneration in Language Models, <ins>EMNLP, 2020</ins> [[Paper](https://aclanthology.org/2020.findings-emnlp.301.pdf)] [[Code](https://github.com/allenai/real-toxicity-prompts)]
