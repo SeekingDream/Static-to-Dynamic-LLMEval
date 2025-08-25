@@ -196,6 +196,8 @@ CONTAMINATION-RESISTANT EVALUATION
 , <ins>Arxiv, 2025</ins> [[Paper](https://arxiv.org/pdf/2501.14275)] [[Code](https://github.com/DSL-Lab/aops)]
 - ForecastBench: A Dynamic Benchmark of AI Forecasting Capabilities
 , <ins>ICLR, 2025</ins> [[Paper](https://arxiv.org/abs/2409.19839)] [[Code](https://www.forecastbench.org/)]
+- RealMath: A Continuous Benchmark for Evaluating Language Models on Research-Level Mathematics
+, <ins>Arxiv, 2025</ins> [[Paper](https://arxiv.org/abs/2505.12575)] [[Code](https://github.com/ethz-spylab/RealMath)]
 #### Rule-Based Generation
 ##### Template-Based
 - GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models
