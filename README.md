@@ -125,7 +125,6 @@ for Natural Language Understanding, <ins>EMNLP, 2018</ins> [[Paper](https://acla
 - SuperGLUE: A Stickier Benchmark for
 General-Purpose Language Understanding Systems, <ins>NeurIPS, 2019</ins> [[Paper](https://arxiv.org/pdf/1905.00537)] [[Code](https://huggingface.co/datasets/aps/super_glue)]
 - CLUE: A Chinese Language Understanding Evaluation Benchmark, <ins>COLING, 2020</ins> [[Paper](https://aclanthology.org/2020.coling-main.419.pdf)] [[Code](https://github.com/CLUEbenchmark/CLUE)]
-- CLUE: A Chinese Language Understanding Evaluation Benchmark, <ins>COLING, 2020</ins> [[Paper](https://aclanthology.org/2020.coling-main.419.pdf)] [[Code](https://github.com/CLUEbenchmark/CLUE)]
 - Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them, <ins>ACL, 2023</ins> [[Paper](https://aclanthology.org/2023.findings-acl.824/)] [[Code](https://github.com/suzgunmirac/BIG-Bench-Hard)]
 #### Reading Comprehension
 - Know What You Don’t Know: Unanswerable Questions for SQuAD, <ins>ACL, 2018</ins> [[Paper](https://aclanthology.org/P18-2124.pdf)] [[Code](https://rajpurkar.github.io/SQuAD-explorer/)]
