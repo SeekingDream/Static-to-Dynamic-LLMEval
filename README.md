@@ -119,6 +119,7 @@ Evaluating Neural Toxic Degeneration in Language Models, <ins>EMNLP, 2020</ins> 
 - TOXIGEN: A Large-Scale Machine-Generated Dataset for Adversarial
 and Implicit Hate Speech Detection, <ins>ACL, 2022</ins> [[Paper](https://aclanthology.org/2022.acl-long.234.pdf)] [[Code](https://github.com/microsoft/toxigen)]
 - TRUSTGEN: On the Trustworthiness of Generative Foundation Models - Guideline, Assessment, and Perspective, <ins>Arxiv, 2025</ins> [[Paper](https://arxiv.org/pdf/2502.14296)] [[Code](https://github.com/TrustGen/TrustEval-toolkit)]
+- Beyond Jailbreaks: Revealing Stealthier and Broader LLM Security Risks Stemming from Alignment Failures, <ins>Arxiv, 2025</ins> [[Paper](https://arxiv.org/pdf/2506.07402)] [[WebSite](https://jailflip.github.io/)]
 #### Language
 - GLUE: A Multi-Task Benchmark and Analysis Platform
 for Natural Language Understanding, <ins>EMNLP, 2018</ins> [[Paper](https://aclanthology.org/W18-5446.pdf)] [[Code](https://paperswithcode.com/paper/glue-a-multi-task-benchmark-and-analysis)]
