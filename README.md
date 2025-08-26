@@ -85,7 +85,6 @@ Retrieval-Augmented Generation, <ins>NAACL, 2025</ins> [[Paper](https://arxiv.or
 - AIME., [[Website](https://artofproblemsolving.com/wiki/index.php/2024_AIME_I?srsltid=AfmBOorI76-rO7SIb5k4OFKc-0omPLPimr5TnY6Phqz-PW8q6WsfYOiz)]
 - CNMO., [[Website](https://www.cms.org.cn/Home/comp/comp/cid/12.html)]
 #### Coding
-- DyCodeEval: Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination, <ins>ICML, 2025</ins> [[Paper](https://arxiv.org/html/2503.04149)] [[Code](https://codekaleidoscope.github.io/dycodeeval.html)]
 - Evaluating Large Language Models Trained on Code, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2107.03374)] [[Code](https://github.com/openai/human-eval)]
 - Program Synthesis with Large Language Models, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2108.07732)] [[Code](https://github.com/google-research/google-research/tree/master/mbpp)]
 - SWE-bench: Can Language Models Resolve Real-world Github Issues?, <ins>ICLR, 2024</ins> [[Paper](https://arxiv.org/abs/2310.06770)] [[Code](https://www.swebench.com/)]
@@ -223,7 +222,9 @@ Language Models via Complexity Classes
 IN LOGICAL REASONING
 , <ins>NeurIPS Workshop, 2024</ins> [[Paper](https://arxiv.org/pdf/2410.23123)] [[Code](https://memkklogic.github.io/)]
 #### LLM-Based Generation
+
 ##### Benchmark Rewriting
+- DyCodeEval: Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination, <ins>ICML, 2025</ins> [[Paper](https://arxiv.org/html/2503.04149)] [[Code](https://codekaleidoscope.github.io/dycodeeval.html)]
 - Automating Dataset Updates Towards Reliable and Timely Evaluation of Large Language Models
 , <ins>NeurIPS, 2024</ins> [[Paper](https://openreview.net/pdf?id=EvEqYlQv8T)] [[Code](https://yingjiahao14.github.io/Automating-DatasetUpdates/)]
 - Inference-Time Decontamination: Reusing Leaked Benchmarks for Large
