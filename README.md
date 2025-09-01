@@ -222,6 +222,8 @@ Language Models via Complexity Classes
 IN LOGICAL REASONING
 , <ins>NeurIPS Workshop, 2024</ins> [[Paper](https://arxiv.org/pdf/2410.23123)] [[Code](https://memkklogic.github.io/)]
 #### LLM-Based Generation
+- DataGen: Unified Synthetic Dataset Generation via Large Language Models
+, <ins>ICLR, 2025</ins> [[Paper](https://openreview.net/forum?id=F5R0lG74Tu)] [[Code](https://github.com/HowieHwong/DataGen)]
 
 ##### Benchmark Rewriting
 - DyCodeEval: Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination, <ins>ICML, 2025</ins> [[Paper](https://arxiv.org/html/2503.04149)] [[Code](https://codekaleidoscope.github.io/dycodeeval.html)]
@@ -254,6 +256,10 @@ Large Language Models
 - BENCHAGENTS: Automated Benchmark Creation with Agent Interaction
 , <ins>Arxiv , 2024</ins> [[Paper](https://arxiv.org/pdf/2410.22584)]
 #### Hybrid Generation
+- On the trustworthiness of generative foundation models: Guideline, assessment, and perspective
+, <ins>Arxiv, 2025</ins> [[Paper](https://arxiv.org/pdf/2502.14296)] [[Code](https://github.com/TrustGen/TrustEval-toolkit)]
+- TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models
+, <ins>NAACL Demo, 2025</ins> [[Paper](https://aclanthology.org/2025.naacl-demo.8.pdf)]  
 - GuessArena: Guess Who I Am? A Self-Adaptive Framework for Evaluating LLMs in Domain-Specific Knowledge and Reasoning
 , <ins>ACL , 2025</ins> [[Paper](https://arxiv.org/pdf/2505.22661)] [[Code](https://github.com/IAAR-Shanghai/GuessArena)]
 - LatestEval: Addressing Data Contamination in Language Model Evaluation
@@ -264,7 +270,8 @@ Models via Adaptive Reasoning Graph
 , <ins>NeurIPS, 2024</ins> [[Paper](https://openreview.net/pdf?id=5IFeCNA7zR)] [[Code](https://github.com/SALT-NLP/DARG)]
 - C2LEVA: Toward Comprehensive and Contamination-Free
 Language Model Evaluation
-, <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)] 
+, <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
+
 
 
  <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
