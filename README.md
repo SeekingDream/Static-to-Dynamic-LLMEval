@@ -1,14 +1,29 @@
-# Recent Advances in Large Langauge Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
+# Recent Advances in Large Language Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
 
+<p align="center">
+  Simin Chen<sup>1</sup>&nbsp&nbsp
+  Yiming Chen<sup>2</sup>&nbsp&nbsp
+  Zexin Li<sup>3</sup>&nbsp&nbsp
+  Yifan Jiang<sup>4</sup>&nbsp&nbsp
+  Zhongwei Wan<sup>5</sup>&nbsp&nbsp 
+  Yixin He<sup>4</sup>&nbsp&nbsp 
+  Dezhi Ran<sup>6</sup>&nbsp&nbsp 
+  Tianle Gu<sup>7</sup>&nbsp&nbsp 
+  Haizhou Li<sup>2,8</sup>&nbsp&nbsp
+  Tao Xie<sup>6</sup>&nbsp&nbsp
+  Baishakhi Ray<sup>1</sup>&nbsp&nbsp
+</p>  
 
-## ❤️ Community Support
-
-
-We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
-
-```markdown
-Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
-```
+<p align="center">
+<sup>1</sup> Columbia University,
+<sup>2</sup> National University of Singapore,
+<sup>3</sup> University of California, Riverside,
+<sup>4</sup> University of Southern California,
+<sup>5</sup> The Ohio State University,
+<sup>6</sup> Peking University,
+<sup>7</sup> Tsinghua University,
+<sup>8</sup> The Chinese University of Hong Kong, Shenzhen<br>
+</p>
 
 ## 📌 What is This Survey About?
 
@@ -21,6 +36,8 @@ Data contamination occurs when benchmark data is inadvertently included in the t
 ## ❓ Why do we need this survey?
 ![img/new_image.jpg](img/new_image.jpg)
 This survey is necessary to address the growing issue of data contamination in LLM benchmarking, which compromises the reliability of **static benchmarks** that rely on fixed, human-curated datasets. While methods like data encryption and post-hoc contamination detection attempt to mitigate this issue, they have inherent limitations. **Dynamic benchmarking** has emerged as a promising alternative, yet existing reviews focus primarily on post-hoc detection and lack a systematic analysis of dynamic methods. Moreover, no standardized criteria exist for evaluating these benchmarks. To bridge this gap, we comprehensively review contamination-free benchmarking strategies, assess their strengths and limitations, and propose evaluation criteria for dynamic benchmarks, offering insights to guide future research and standardization.
+
+![img/LLM_Benchmarking.png](img/LLM_Benchmarking.png)
 
 ## 📖 Table of Content
 - [Static Benchmarking](#Static-Benchmarking)
@@ -273,6 +290,13 @@ Language Model Evaluation
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
 
 
+## ❤️ Community Support
 
+
+We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
+
+```markdown
+Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
+```
  <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
 
