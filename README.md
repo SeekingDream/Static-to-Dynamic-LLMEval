@@ -1,4 +1,4 @@
-# Recent Advances in Large Langauge Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
+# Recent Advances in Large Language Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
 
 <p align="center">
   Simin Chen<sup>1</sup>&nbsp&nbsp
