@@ -1,5 +1,10 @@
 # Recent Advances in Large Language Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
 
+<div align="center">
+  <img src="img/logo.jpeg" alt="LLM survey" width="1200"><br>
+</div>
+<br>
+
 <p align="center">
   Simin Chen<sup>1</sup>&nbsp&nbsp
   Yiming Chen<sup>2</sup>&nbsp&nbsp
