@@ -25,6 +25,29 @@
 <sup>8</sup> The Chinese University of Hong Kong, Shenzhen<br>
 </p>
 
+## Citation
+```bibtex
+@inproceedings{choi-etal-2024-unigen,
+  title={Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation},
+  author={Chen, Simin and Chen, Yiming and Li, Zexin and Jiang, Yifan and Wan, Zhongwei and He, Yixin and Ran, Dezhi and Gu, Tianle and Li, Haizhou and Xie, Tao and others},
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    publisher = "Association for Computational Linguistics",
+}
+```
+
+## ❤️ Community Support
+
+
+We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
+
+```markdown
+Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
+```
+ <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
+
+
 ## 📌 What is This Survey About?
 
 Data contamination has received increasing attention in the era of large language models (LLMs) due to their reliance on vast Internet-derived training corpora. To mitigate the risk of potential data contamination, LLM benchmarking has undergone a transformation from *static* to *dynamic* benchmarking. In this work, we conduct an in-depth analysis of existing *static* to *dynamic* benchmarking methods aimed at reducing data contamination risks. We first examine methods that enhance *static* benchmarks and identify their inherent limitations. We then highlight a critical gap—the lack of standardized criteria for evaluating *dynamic* benchmarks. Based on this observation, we propose a series of optimal design principles for *dynamic* benchmarking and analyze the limitations of existing *dynamic* benchmarks. This survey provides a concise yet comprehensive overview of recent advancements in data contamination research, offering valuable insights and a clear guide for future research efforts.
@@ -289,14 +312,4 @@ Models via Adaptive Reasoning Graph
 Language Model Evaluation
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
 
-
-## ❤️ Community Support
-
-
-We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
-
-```markdown
-Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
-```
- <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
 
