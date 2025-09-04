@@ -1,5 +1,10 @@
 # Recent Advances in Large Language Model Benchmarks against Data Contamination: From Static to Dynamic Evaluation
 
+<div align="center">
+  <img src="img/logo.jpeg" alt="LLM survey" width="1200"><br>
+</div>
+<br>
+
 <p align="center">
   Simin Chen<sup>1</sup>&nbsp&nbsp
   Yiming Chen<sup>2</sup>&nbsp&nbsp
@@ -24,6 +29,29 @@
 <sup>7</sup> Tsinghua University,
 <sup>8</sup> The Chinese University of Hong Kong, Shenzhen<br>
 </p>
+
+## Citation
+```bibtex
+@inproceedings{choi-etal-2024-unigen,
+  title={Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation},
+  author={Chen, Simin and Chen, Yiming and Li, Zexin and Jiang, Yifan and Wan, Zhongwei and He, Yixin and Ran, Dezhi and Gu, Tianle and Li, Haizhou and Xie, Tao and others},
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    publisher = "Association for Computational Linguistics",
+}
+```
+
+## ❤️ Community Support
+
+NOTE: As we cannot update the **EMNLP main camera ready** in real time, please refer to this repo for the latest updates, and the paper may be updated later. We also welcome any pull requests or issues to help us make this survey perfect. Your contributions will be acknowledged in the acknowledgements.
+
+We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
+
+```markdown
+Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
+```
+ <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
 
 ## 📌 What is This Survey About?
 
@@ -289,14 +317,4 @@ Models via Adaptive Reasoning Graph
 Language Model Evaluation
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
 
-
-## ❤️ Community Support
-
-
-We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
-
-```markdown
-Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
-```
- <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
 
