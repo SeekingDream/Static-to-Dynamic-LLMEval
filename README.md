@@ -39,6 +39,7 @@
 
 ## ❤️ Community Support
 
+NOTE: As we cannot update the **EMNLP main camera ready** in real time, please refer to this repo for the latest updates, and the paper may be updated later. We also welcome any pull requests or issues to help us make this survey perfect. Your contributions will be acknowledged in the acknowledgements.
 
 We will actively maintain this repository by incorporating new research as it emerges. If you have any suggestions regarding our taxonomy, find any missed papers, or update any preprint arXiv paper that has been accepted to some venue, feel free to send us an email or submit a **pull request** using the following markdown format.
 
@@ -46,7 +47,6 @@ We will actively maintain this repository by incorporating new research as it em
 Paper Title, <ins>Conference/Journal/Preprint, Year</ins>  [[pdf](link)] [[other resources](link)].
 ```
  <!-- [^1]: This table was updated Dec 2023. This table will require updates as cool new frameworks are being released frequently and current frameworks continue to mature at an accelerated rate. So please feel free to suggest any important distinguishing features or popular new frameworks-->
-
 
 ## 📌 What is This Survey About?
 
