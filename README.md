@@ -17,7 +17,7 @@
 <p align="center">
 <sup>1</sup> Columbia University,
 <sup>2</sup> National University of Singapore,
-<sup>3</sup> University of California, Riverside
+<sup>3</sup> University of California, Riverside,
 <sup>4</sup> University of Southern California,
 <sup>5</sup> The Ohio State University,
 <sup>6</sup> Peking University,
