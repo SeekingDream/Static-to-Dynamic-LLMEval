@@ -30,17 +30,7 @@
 <sup>8</sup> The Chinese University of Hong Kong, Shenzhen<br>
 </p>
 
-## Citation
-```bibtex
-@inproceedings{choi-etal-2024-unigen,
-  title={Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation},
-  author={Chen, Simin and Chen, Yiming and Li, Zexin and Jiang, Yifan and Wan, Zhongwei and He, Yixin and Ran, Dezhi and Gu, Tianle and Li, Haizhou and Xie, Tao and others},
-    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
-    month = nov,
-    year = "2025",
-    publisher = "Association for Computational Linguistics",
-}
-```
+
 
 ## ❤️ Community Support
 
@@ -317,4 +307,15 @@ Models via Adaptive Reasoning Graph
 Language Model Evaluation
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
 
+## Citation
+```bibtex
+@inproceedings{choi-etal-2024-unigen,
+  title={Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation},
+  author={Chen, Simin and Chen, Yiming and Li, Zexin and Jiang, Yifan and Wan, Zhongwei and He, Yixin and Ran, Dezhi and Gu, Tianle and Li, Haizhou and Xie, Tao and others},
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    publisher = "Association for Computational Linguistics",
+}
+```
 
