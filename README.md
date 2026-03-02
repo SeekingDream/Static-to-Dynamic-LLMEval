@@ -310,7 +310,7 @@ Language Model Evaluation
 ## Citation
 ```bibtex
 @inproceedings{choi-etal-2024-unigen,
-  title={Recent advances in large langauge model benchmarks against data contamination: From static to dynamic evaluation},
+  title={Recent advances in large language model benchmarks against data contamination: From static to dynamic evaluation},
   author={Chen, Simin and Chen, Yiming and Li, Zexin and Jiang, Yifan and Wan, Zhongwei and He, Yixin and Ran, Dezhi and Gu, Tianle and Li, Haizhou and Xie, Tao and others},
     booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
     month = nov,
