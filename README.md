@@ -85,6 +85,7 @@ This survey is necessary to address the growing issue of data contamination in L
       - [Interactive Evaluation](#Interactive-Evaluation)
       - [Multi-Agent Evaluation](#Multi-Agent-Evaluation)
     - [Hybrid Generation](#Hybrid-Generation)
+    - [Network & System](#Network--System)
 
 
 
@@ -306,6 +307,9 @@ Models via Adaptive Reasoning Graph
 - C2LEVA: Toward Comprehensive and Contamination-Free
 Language Model Evaluation
 , <ins>AAAI, 2024</ins> [[Paper](https://arxiv.org/pdf/2412.04947)]
+
+#### Network & System
+- NetArena: Dynamic Benchmarks for AI Agents in Network Automation, <ins>ICLR, 2026</ins> [[Paper](https://openreview.net/forum?id=BPVPOtzoOz)] [[Code](https://github.com/Froot-NetSys/NetArena)]
 
 ## Citation
 ```bibtex
