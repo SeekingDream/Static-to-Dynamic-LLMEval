@@ -120,6 +120,8 @@ PIPELINE, <ins>Arxiv, 2024</ins> [[Paper](https://arxiv.org/pdf/2406.11939)] [[C
 Retrieval-Augmented Generation, <ins>NAACL, 2025</ins> [[Paper](https://arxiv.org/pdf/2409.12941)] [[Code](https://huggingface.co/datasets/google/frames-benchmark)]
 - AIME., [[Website](https://artofproblemsolving.com/wiki/index.php/2024_AIME_I?srsltid=AfmBOorI76-rO7SIb5k4OFKc-0omPLPimr5TnY6Phqz-PW8q6WsfYOiz)]
 - CNMO., [[Website](https://www.cms.org.cn/Home/comp/comp/cid/12.html)]
+#### Structured Outputs
+- StructEval: Benchmarking LLMs' Capabilities to Generate Structural Outputs, <ins>TMLR, 2025</ins> [[Paper](https://arxiv.org/abs/2505.20139)] [[Code](https://github.com/TIGER-AI-Lab/StructEval)] [[Project](https://structeval.github.io/)] [[Dataset](https://huggingface.co/datasets/TIGER-Lab/StructEval)]
 #### Coding
 - Evaluating Large Language Models Trained on Code, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2107.03374)] [[Code](https://github.com/openai/human-eval)]
 - Program Synthesis with Large Language Models, <ins>Arxiv, 2021</ins> [[Paper](https://arxiv.org/pdf/2108.07732)] [[Code](https://github.com/google-research/google-research/tree/master/mbpp)]
@@ -322,4 +324,3 @@ Language Model Evaluation
     publisher = "Association for Computational Linguistics",
 }
 ```
-
