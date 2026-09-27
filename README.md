@@ -212,6 +212,8 @@ in Text-to-SQL Translation, <ins>ACL, 2024</ins> [[Paper](https://arxiv.org/pdf/
 - ConStat: Performance-Based Contamination
 Detection in Large Language Models
 , <ins>NeurIPS, 2024</ins> [[Paper](https://arxiv.org/pdf/2405.16281)] [[Code](https://github.com/eth-sri/ConStat)]
+- The Illusion of Reasoning: Exposing Evasive Data Contamination in LLMs
+via Zero-CoT Truncation, <ins>Arxiv, 2026</ins> [[Paper](https://arxiv.org/abs/2605.21856)] [[Code](https://github.com/Yifan-Lan/zero-cot-probe)]
 
 ## Dynamic Benchmarking
 ### Dynamic Benchmark Application
